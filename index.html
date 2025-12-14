@@ -54,7 +54,19 @@ h1{text-align:center;color:#ff6b81}
 </style>
 </head>
 
-<body>
+<body><button id="playMusic" style="
+position:fixed;
+bottom:20px;
+right:20px;
+padding:10px 14px;
+border:none;
+border-radius:30px;
+background:#ff6b81;
+color:white;
+font-size:14px;
+z-index:9999;">
+🎧 Bật nhạc
+</button>
 
 <div class="lock" id="lock">
   <h2>🔒 Bức thư chỉ dành cho Gia Linh (Ỉn)</h2>
@@ -66,9 +78,10 @@ h1{text-align:center;color:#ff6b81}
 
 <div class="letter" id="letter">
 
-<audio autoplay loop>
-<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b7c4e2c2c.mp3?filename=melancholy-piano-ambient-11157.mp3">
+<audio id="bgm" loop>
+  <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b7c4e2c2c.mp3">
 </audio>
+
 
 <h1>Gửi Gia Linh (Ỉn) 🤍</h1>
 <div class="subtitle">Bức thư này chỉ dành cho em</div>
@@ -114,5 +127,10 @@ function openLetter(){
 }
 </script>
 
-</body>
+<script>
+document.getElementById("playMusic").onclick = function(){
+  document.getElementById("bgm").play();
+  this.style.display="none";
+};
+</script></body>
 </html>
