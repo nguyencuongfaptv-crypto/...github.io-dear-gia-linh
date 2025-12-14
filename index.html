@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Gửi Gia Linh (Ỉn)</title>
+<style>
+body{
+  background:linear-gradient(135deg,#ffe6e6,#fff);
+  font-family:'Segoe UI',sans-serif;
+  margin:0;padding:20px;
+}
+.lock{
+  max-width:400px;
+  margin:120px auto;
+  background:#ffffffdd;
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+input{
+  width:80%;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  margin-top:10px;
+}
+button{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:12px;
+  background:#ff6b81;
+  color:#fff;
+  font-size:15px;
+}
+.letter{
+  display:none;
+  max-width:720px;
+  margin:auto;
+  background:#ffffffcc;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+h1{text-align:center;color:#ff6b81}
+.subtitle{text-align:center;color:#888;font-size:14px;margin-bottom:20px}
+.signature{text-align:right;margin-top:40px;font-weight:bold}
+.heart{
+  position:fixed;top:-10px;font-size:16px;
+  animation:fall linear infinite;opacity:.7
+}
+@keyframes fall{to{transform:translateY(110vh);opacity:0}}
+</style>
+</head>
+
+<body>
+
+<div class="lock" id="lock">
+  <h2>🔒 Bức thư chỉ dành cho Gia Linh (Ỉn)</h2>
+  <p>Nhập mật khẩu để mở</p>
+  <input type="password" id="pw" placeholder="Ngày đặc biệt của tụi mình">
+  <br>
+  <button onclick="openLetter()">Mở thư</button>
+</div>
+
+<div class="letter" id="letter">
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_4b7c4e2c2c.mp3?filename=melancholy-piano-ambient-11157.mp3">
+</audio>
+
+<h1>Gửi Gia Linh (Ỉn) 🤍</h1>
+<div class="subtitle">Bức thư này chỉ dành cho em</div>
+
+<p>Anh biết là mình yêu nhau chưa phải quá dài, nhưng đã cùng nhau đi qua rất nhiều khoảnh khắc quan trọng.</p>
+
+<p>Tụi mình cùng nhau trải qua những năm tháng cuối cùng của thời học sinh, cùng ôn tập vất vả để hoàn thành kỳ thi tốt nghiệp cấp 3. Anh chọn học đại học ở đây, còn em chọn con đường du học.</p>
+
+<p>Mỗi người một hướng đi, nhưng chưa bao giờ mâu thuẫn, chỉ có động viên và tin tưởng. Anh lên Hà Nội học, em ở nhà học tiếng và chờ ngày đi. Khoảng thời gian đó, anh đi đi về về, không quan tâm xa hay gần, chỉ cần được gặp em.</p>
+
+<p>Ngày chờ kết quả, cả hai đều thấp thỏm. Em lo, anh động viên. Trộm vía, em đỗ. Anh vui lắm, nhưng cũng buồn vì phải xa em 🥹</p>
+
+<p>Em đi là để thực hiện ước mơ của mình. Một đất nước mới, môi trường mới, cuộc sống mới. Ban đầu sẽ khó khăn, nhớ nhà, tủi thân, nhưng hãy mạnh mẽ vượt qua để trưởng thành hơn.</p>
+
+<p>Nếu buồn hay nhớ nhà, hãy gọi hoặc nhắn tin cho anh. Anh luôn ở đây. Đừng gọi cho ông bà nhiều quá, anh sợ ông bà lo.</p>
+
+<p>Lúc ở sân bay, anh đã cố kìm để không khóc, vì sợ em nhìn thấy rồi không nỡ đi 🥹</p>
+
+<p>Sang bên đó nhớ giữ gìn sức khỏe, học tập thật tốt. Cẩn trọng với mọi người xung quanh, đất khách quê người đừng tin ai quá nhiều.</p>
+
+<p>Anh ở đây cũng sẽ cố gắng học tập, ra trường sớm, có công việc ổn định. Tụi mình cùng cố gắng nhé 🤍</p>
+
+<div class="signature">
+Thương em rất nhiều<br>🤍
+</div>
+</div>
+
+<script>
+function openLetter(){
+  if(document.getElementById('pw').value==="1-12-2024"){
+    document.getElementById('lock').style.display="none";
+    document.getElementById('letter').style.display="block";
+    setInterval(()=>{
+      let h=document.createElement("div");
+      h.className="heart";
+      h.innerText="🤍";
+      h.style.left=Math.random()*100+"vw";
+      h.style.animationDuration=(3+Math.random()*4)+"s";
+      document.body.appendChild(h);
+      setTimeout(()=>h.remove(),7000);
+    },450);
+  } else alert("Sai mật khẩu rồi Ỉn ơi 🤍");
+}
+</script>
+
+</body>
+</html>
